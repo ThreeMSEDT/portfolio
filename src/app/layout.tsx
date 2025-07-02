@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Handlee } from 'next/font/google';
 import "./globals.css";
+import ParticlesBackground from './components/ParticlesBackground';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${handlee.className}`} >
-        {children}
+        <ParticlesBackground />
+        <div className="h-full w-full" style={{ position: 'relative', zIndex: 1 }}>
+          {children}
+        </div>
       </body>
     </html>
   );
