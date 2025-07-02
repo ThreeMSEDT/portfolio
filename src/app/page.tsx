@@ -9,8 +9,8 @@ const routes = ['/muslim', '/software-engineer', '/day-trader'];
 
 export default function Home() {
   return (
-    <div className='w-full h-full flex flex-col gap-8 items-center justify-center' >
-      <div className='flex gap-4 items-center justify-center text-9xl'>
+    <div className='w-full h-full flex flex-col gap-4 md:gap-8 items-center justify-center' >
+      <div className='flex flex-wrap gap-2 sm:gap-4 items-center justify-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl'>
         {header.map((char, i) => (
           <motion.div
             key={i}
@@ -22,7 +22,7 @@ export default function Home() {
           </motion.div>
         ))}
       </div>
-      <div className='flex gap-4 items-center justify-center text-xl text-center text-[#AEAEAE]'>
+      <div className='flex flex-wrap gap-2 sm:gap-4 items-center justify-center text-base sm:text-lg md:text-xl text-center text-[#AEAEAE]'>
         {subheader.map((part, i) => (
           <Link href={routes[i]} key={i}>
             <motion.div
