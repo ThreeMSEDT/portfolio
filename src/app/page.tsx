@@ -26,7 +26,15 @@ export default function Home() {
         {subheader.map((part, i) => (
           <Link href={routes[i]} key={i}>
             <motion.div
-              className="cursor-pointer hover:text-[#E3E3E3]"
+              className={`relative inline-block cursor-pointer
+              hover:text-[#E3E3E3]
+              before:content-[''] before:absolute before:bottom-0 before:left-0
+              before:h-[2px] before:w-full before:bg-[#E3E3E3]
+              before:rounded-full
+              before:origin-center
+              before:scale-x-0
+              before:transition-transform before:duration-300
+              hover:before:scale-x-100`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
