@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import About from './content/about';
 import Experience from './content/experience';
+import Education from './content/education';
+import Achievements from './content/achievements';
 
 const options = ['About', 'Experience', 'Skills', 'Projects', 'Education', 'Achievements', 'Resume'];
 
@@ -13,8 +15,8 @@ export default function SoftwareEngineer() {
     <Experience key='experience' />,
     <div key="skills">Skills content coming soon...</div>,
     <div key="projects">Projects content coming soon...</div>,
-    <div key="education">Education content coming soon...</div>,
-    <div key="achievements">Achievements content coming soon...</div>,
+    <Education key='education' />,
+    <Achievements key='achievements'/>,
     <div key="resume">Resume content coming soon...</div>
   ];
 
