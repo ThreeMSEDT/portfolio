@@ -14,6 +14,7 @@ export default function Home() {
           <motion.div
             className={`relative inline-block cursor-pointer
               hover:text-[#252525]
+              hover:[text-shadow:0_2px_4px_rgba(0,0,0,0.2)]
               before:content-[''] before:absolute before:bottom-0 before:left-0
               before:h-[2px] before:w-full before:bg-[#252525]
               before:rounded-full
