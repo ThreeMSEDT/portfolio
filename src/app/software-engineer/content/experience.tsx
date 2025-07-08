@@ -1,6 +1,17 @@
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { LuMonitorCog } from "react-icons/lu";
+
 export default function Experience() {
   return (
     <div className='w-full flex flex-col flex-wrap gap-8 text-base'>
+      <div className="mb-4" >
+        <Tooltip>
+          <TooltipTrigger><LuMonitorCog className="text-8xl" /></TooltipTrigger>
+          <TooltipContent>
+            <p className="text-md font-bold" >Experience</p>
+          </TooltipContent>
+        </Tooltip>
+      </div>
       <div className="flex flex-col gap-2 items-center justify-center" >
         <div className="text-xl sm:text-2xl md:text-3xl" >
           Full-Stack Engineer

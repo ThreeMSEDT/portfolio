@@ -7,6 +7,7 @@ import Experience from './content/experience';
 import Education from './content/education';
 import Achievements from './content/achievements';
 import Skills from './content/skills';
+import Head from './content/head';
 
 const sectionVariants = {
   hidden: {
@@ -60,8 +61,16 @@ export default function SoftwareEngineer() {
       variants={containerVariants}
     >
       <motion.div
-        className='w-4/6 mt-24 mb-24 h-fit flex flex-col flex-wrap gap-12 items-center justify-center text-center'
+        className='w-4/6 mb-24 h-fit flex flex-col flex-wrap gap-12 items-center justify-center text-center'
       >
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <Head />
+        </motion.div>
         <motion.div
           variants={sectionVariants}
           initial="hidden"
