@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className='w-full flex flex-col flex-wrap gap-12 items-center justify-center'>
       <Tooltip>
-        <TooltipTrigger><LuInfo className="text-8xl" /></TooltipTrigger>
+        <TooltipTrigger><LuInfo className="text-6xl md:text-8xl" /></TooltipTrigger>
         <TooltipContent>
           <p className="text-md font-bold" >About</p>
         </TooltipContent>

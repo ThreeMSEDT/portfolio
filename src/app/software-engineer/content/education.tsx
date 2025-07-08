@@ -6,7 +6,7 @@ export default function Education() {
     <div className='w-full flex flex-col flex-wrap gap-8 items-center justify-between text-base'>
       <div className="mb-4" >
         <Tooltip>
-          <TooltipTrigger><LuGraduationCap className="text-8xl" /></TooltipTrigger>
+          <TooltipTrigger><LuGraduationCap className="text-6xl md:text-8xl" /></TooltipTrigger>
           <TooltipContent>
             <p className="text-md font-bold" >Education</p>
           </TooltipContent>

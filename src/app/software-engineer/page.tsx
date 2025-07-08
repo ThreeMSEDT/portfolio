@@ -25,18 +25,6 @@ const sectionVariants = {
   }
 };
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.3,
-      delayChildren: 0.2
-    }
-  }
-};
-
 const separatorVariants = {
   hidden: {
     scaleX: 0,
@@ -54,14 +42,9 @@ const separatorVariants = {
 
 export default function SoftwareEngineer() {
   return (
-    <motion.div
-      className='w-full flex items-center justify-center'
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
+    <div className='w-full flex flex-col items-center justify-center' >
       <motion.div
-        className='w-4/6 mb-24 h-fit flex flex-col flex-wrap gap-12 items-center justify-center text-center'
+        className='w-4/6 my-32 flex flex-col flex-wrap gap-12 items-center justify-center text-center'
       >
         <motion.div
           variants={sectionVariants}
@@ -71,6 +54,7 @@ export default function SoftwareEngineer() {
         >
           <Head />
         </motion.div>
+        <div></div>
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -161,6 +145,6 @@ export default function SoftwareEngineer() {
           <Separator />
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

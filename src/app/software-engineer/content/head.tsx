@@ -1,6 +1,6 @@
 export default function Head() {
   return (
-    <div className='h-[95vh] w-full flex flex-col flex-wrap gap-3 items-center justify-center'>
+    <div className='w-full flex flex-col flex-wrap gap-3 items-center justify-center'>
       <div className='text-6xl md:text-8xl text-shadow-lg' >
         I&apos;m Mustafa
       </div>

@@ -9,13 +9,13 @@ export default function Skills() {
   return (
     <div className="flex flex-col flex-wrap gap-12 items-center justify-center" >
       <Tooltip>
-        <TooltipTrigger><LuPocketKnife className="text-8xl" /></TooltipTrigger>
+        <TooltipTrigger><LuPocketKnife className="text-6xl md:text-8xl" /></TooltipTrigger>
         <TooltipContent>
           <p className="text-md font-bold" >Skills</p>
         </TooltipContent>
       </Tooltip>
       <div className='w-full flex flex-col items-center justify-center flex-wrap gap-4 sm:gap-8 text-lg sm:text-3xl md:text-4xl'>
-        <div className="flex gap-4 sm:gap-8" >
+        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
           <Tooltip>
             <TooltipTrigger><BiLogoCPlusPlus /></TooltipTrigger>
             <TooltipContent>
@@ -53,7 +53,7 @@ export default function Skills() {
             </TooltipContent>
           </Tooltip>
         </div>
-        <div className="flex gap-4 sm:gap-8" >
+        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
           <Tooltip>
             <TooltipTrigger><SiSpring /></TooltipTrigger>
             <TooltipContent>
@@ -103,7 +103,7 @@ export default function Skills() {
             </TooltipContent>
           </Tooltip>
         </div>
-        <div className="flex gap-4 sm:gap-8" >
+        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
           <Tooltip>
             <TooltipTrigger><FaAws /></TooltipTrigger>
             <TooltipContent>

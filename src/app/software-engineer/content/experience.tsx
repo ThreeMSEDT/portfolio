@@ -6,7 +6,7 @@ export default function Experience() {
     <div className='w-full flex flex-col flex-wrap gap-8 text-base'>
       <div className="mb-4" >
         <Tooltip>
-          <TooltipTrigger><LuMonitorCog className="text-8xl" /></TooltipTrigger>
+          <TooltipTrigger><LuMonitorCog className="text-6xl md:text-8xl" /></TooltipTrigger>
           <TooltipContent>
             <p className="text-md font-bold" >Experience</p>
           </TooltipContent>
