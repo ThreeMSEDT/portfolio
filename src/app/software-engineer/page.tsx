@@ -13,15 +13,17 @@ import Resume from './content/resume';
 const sectionVariants = {
   hidden: {
     opacity: 0,
-    y: 60,
-    scale: 0.95
+    y: 16,
+    scale: 0.95,
+    filter: 'blur(10px)'
   },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
+    filter: 'blur(0px)',
     transition: {
-      duration: 0.8,
+      duration: 0.5,
     }
   }
 };
