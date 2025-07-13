@@ -6,6 +6,9 @@ import { Toaster } from 'sonner';
 export const metadata: Metadata = {
   title: "Mustafa Alsheikh",
   description: "Portfolio",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 const quicksand = Quicksand({
