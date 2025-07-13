@@ -8,6 +8,7 @@ import Education from './content/education';
 import Achievements from './content/achievements';
 import Skills from './content/skills';
 import Head from './content/head';
+import Resume from './content/resume';
 
 const sectionVariants = {
   hidden: {
@@ -134,6 +135,23 @@ export default function SoftwareEngineer() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <Achievements />
+        </motion.div>
+
+        <motion.div
+          variants={separatorVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <Separator />
+        </motion.div>
+        <motion.div
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <Resume />
         </motion.div>
 
         <motion.div
