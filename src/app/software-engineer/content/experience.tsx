@@ -20,7 +20,7 @@ export default function Experience() {
           <span>11/2023 - Present</span>
         </div>
         <div>
-          Developed and launched multiple full-stack applications, including a cross-platform cryptocurrency wallet manager, a browser extension suite with 20+ developer tools, and a SaaS platform for custom trading indicators and backtesting across various assets.
+          Developed and launched multiple full-stack applications, including a cross-platform cryptocurrency wallet manager, a browser extension suite with 30+ developer tools, and a SaaS platform for custom trading indicators and backtesting across various assets.
         </div>
       </div>
       <div className="flex flex-col gap-2 items-center justify-center" >
