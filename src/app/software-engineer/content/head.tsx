@@ -17,12 +17,23 @@ export default function Head() {
         I&apos;m Mustafa
       </div>
       <div className='text-base' >
-        <span><Tooltip>
-          <TooltipTrigger onClick={handleCopy} style={{ cursor: 'pointer' }}>{email}</TooltipTrigger>
-          <TooltipContent>
-            <p className="text-md font-bold" >Copy</p>
-          </TooltipContent>
-        </Tooltip> | Amman, Jordan</span>
+        <span>
+          <Tooltip>
+            <TooltipTrigger onClick={handleCopy} style={{ cursor: 'pointer' }}>{email}</TooltipTrigger>
+            <TooltipContent>
+              <p className="text-md font-bold" >Copy</p>
+            </TooltipContent>
+          </Tooltip> | <Tooltip>
+            <TooltipTrigger>
+              <a className="font-bold" href="/Mustafa Alsheikh Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-md font-bold" >Open</p>
+            </TooltipContent>
+          </Tooltip> | Amman, Jordan
+        </span>
       </div>
       <div className="font-bold" >
         Full-stack software engineer with over 4 years of experience building scalable applications across web, mobile, and cloud platforms. Proven track record at Amazon and as an independent developer delivering impactful projects with measurable outcomes. Passionate about system design, developer tools, and competitive programming.
