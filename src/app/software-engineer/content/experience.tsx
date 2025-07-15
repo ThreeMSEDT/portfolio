@@ -1,6 +1,6 @@
 import { LuMonitorCog, LuBuilding2, LuCalendar, LuMapPin } from "react-icons/lu";
 import { SiAmazon } from "react-icons/si";
-import { motion } from "framer-motion";
+import { AnimatedSection, AnimatedHeader, StaggeredContainer } from "@/components/ui/animated-section";
 
 interface ExperienceItemProps {
   title: string;
@@ -15,13 +15,7 @@ interface ExperienceItemProps {
 
 function TimelineItem({ title, company, location, duration, description, technologies, companyIcon, current, isLast }: ExperienceItemProps & { isLast?: boolean }) {
   return (
-    <motion.div
-      className="relative group"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <AnimatedSection className="relative group">
       {/* Mobile Layout - Icon at top center */}
       <div className="flex flex-col items-center sm:hidden mb-4">
         <div className={`relative z-10 flex items-center justify-center w-12 h-12 transition-all duration-300 group-hover:scale-110 ${current
@@ -125,7 +119,7 @@ function TimelineItem({ title, company, location, duration, description, technol
       </div>
 
       {/* Mobile Content - Below the centered icon */}
-      <div className="sm:hidden px-4 py-4 mb-8 relative">
+      <div className="sm:hidden px-4 pt-4 relative">
         {current && (
           <div className="absolute -top-2 -right-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
             Current Role
@@ -180,7 +174,7 @@ function TimelineItem({ title, company, location, duration, description, technol
           ))}
         </div>
       </div>
-    </motion.div>
+    </AnimatedSection>
   );
 }
 
@@ -232,32 +226,13 @@ export default function Experience() {
 
   return (
     <div className='w-full flex flex-col gap-8'>
-      <motion.div
-        className="mb-4 text-center"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      <AnimatedHeader className="mb-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-gray-900 dark:text-white text-shadow-lg">
           Professional Experience
         </h2>
-      </motion.div>
+      </AnimatedHeader>
 
-      <motion.div
-        className="relative"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        variants={{
-          hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.3
-            }
-          }
-        }}
-      >
+      <StaggeredContainer className="relative">
         {experiences.map((experience, index) => (
           <TimelineItem
             key={index}
@@ -265,7 +240,7 @@ export default function Experience() {
             isLast={index === experiences.length - 1}
           />
         ))}
-      </motion.div>
+      </StaggeredContainer>
     </div>
   );
 }

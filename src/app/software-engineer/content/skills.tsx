@@ -2,20 +2,19 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { BiLogoCPlusPlus, BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { FaAws, FaFigma, FaGitAlt, FaGithub, FaJava, FaJira, FaPython, FaReact } from "react-icons/fa";
 import { FaDartLang, FaFlutter } from "react-icons/fa6";
-import { LuPocketKnife } from "react-icons/lu";
 import { SiSpring, SiNextdotjs, SiFastapi, SiJquery, SiTailwindcss, SiDaisyui, SiPaddle } from "react-icons/si";
+import { AnimatedSection, AnimatedHeader } from "@/components/ui/animated-section";
 
 export default function Skills() {
   return (
-    <div className="flex flex-col flex-wrap gap-12 items-center justify-center" >
-      <Tooltip>
-        <TooltipTrigger><LuPocketKnife className="text-6xl md:text-8xl" /></TooltipTrigger>
-        <TooltipContent>
-          <p className="text-md font-bold" >Skills</p>
-        </TooltipContent>
-      </Tooltip>
+    <div className='w-full flex flex-col gap-8'>
+      <AnimatedHeader className="mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-shadow-lg">
+          Skills
+        </h2>
+      </AnimatedHeader>
       <div className='w-full flex flex-col items-center justify-center flex-wrap gap-4 sm:gap-8 text-lg sm:text-3xl md:text-4xl'>
-        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
+        <AnimatedSection className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" delay={0.2}>
           <Tooltip>
             <TooltipTrigger><BiLogoCPlusPlus /></TooltipTrigger>
             <TooltipContent>
@@ -52,8 +51,8 @@ export default function Skills() {
               <p className="text-md font-bold" >Python</p>
             </TooltipContent>
           </Tooltip>
-        </div>
-        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
+        </AnimatedSection>
+        <AnimatedSection className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" delay={0.4}>
           <Tooltip>
             <TooltipTrigger><SiSpring /></TooltipTrigger>
             <TooltipContent>
@@ -102,8 +101,8 @@ export default function Skills() {
               <p className="text-md font-bold" >daisyUI</p>
             </TooltipContent>
           </Tooltip>
-        </div>
-        <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" >
+        </AnimatedSection>
+        <AnimatedSection className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center" delay={0.6}>
           <Tooltip>
             <TooltipTrigger><FaAws /></TooltipTrigger>
             <TooltipContent>
@@ -140,7 +139,7 @@ export default function Skills() {
               <p className="text-md font-bold" >Paddle</p>
             </TooltipContent>
           </Tooltip>
-        </div>
+        </AnimatedSection>
       </div>
     </div>
   );
