@@ -13,7 +13,7 @@ import Resume from './content/resume';
 const sectionVariants = {
   hidden: {
     opacity: 0,
-    y: 16,
+    y: 0,
     scale: 0.95,
     filter: 'blur(10px)'
   },
