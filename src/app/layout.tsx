@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className}`} >
+      <body className={`${quicksand.className} dotted-background`} >
         {children}
         <Toaster position="top-center" />
       </body>

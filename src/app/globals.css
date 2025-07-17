@@ -127,3 +127,49 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .dotted-background {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: 0 0;
+    min-height: 100vh;
+  }
+
+  .dark .dotted-background {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: 0 0;
+  }
+
+  /* Fallback for mobile devices where fixed attachment might not work well */
+  @media (max-width: 768px) {
+    .dotted-background {
+      background-size: 20px 20px;
+      background-attachment: scroll;
+    }
+
+    .dark .dotted-background {
+      background-size: 20px 20px;
+      background-attachment: scroll;
+    }
+  }
+
+  /* Ensure smooth scrolling performance */
+  html.dotted-background,
+  body.dotted-background {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    background-repeat: repeat;
+  }
+
+  .dark html.dotted-background,
+  .dark body.dotted-background {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  }
+}
