@@ -1,5 +1,4 @@
-import { LuMonitorCog, LuBuilding2, LuCalendar, LuMapPin } from "react-icons/lu";
-import { SiAmazon } from "react-icons/si";
+import { LuBuilding2, LuCalendar, LuMapPin } from "react-icons/lu";
 import { AnimatedSection, AnimatedHeader, StaggeredContainer } from "@/components/ui/animated-section";
 
 interface ExperienceItemProps {
@@ -9,65 +8,32 @@ interface ExperienceItemProps {
   duration: string;
   description: string[];
   technologies: string[];
-  companyIcon?: React.ReactNode;
   current?: boolean;
 }
 
-function TimelineItem({ title, company, location, duration, description, technologies, companyIcon, current, isLast }: ExperienceItemProps & { isLast?: boolean }) {
+function TimelineItem({ title, company, location, duration, description, technologies, current, isLast }: ExperienceItemProps & { isLast?: boolean }) {
   return (
     <AnimatedSection className="relative group">
-      {/* Mobile Layout - Icon at top center */}
-      <div className="flex flex-col items-center sm:hidden mb-4">
-        <div className={`relative z-10 flex items-center justify-center w-12 h-12 transition-all duration-300 group-hover:scale-110 ${current
-          ? 'dark:bg-white border-gray-700 dark:border-gray-300'
-          : ' dark:bg-gray-300 border-gray-500 dark:border-gray-500'
-          }`}>
-          {companyIcon ? (
-            <div className={current ? "text-white dark:text-gray-900" : "text-white dark:text-gray-900"}>
-              <div className="w-6 h-6">
-                {companyIcon}
-              </div>
-            </div>
-          ) : (
-            <div className="w-3 h-3 bg-white dark:bg-gray-900 rounded-full"></div>
-          )}
-        </div>
-      </div>
-
-      {/* Desktop Layout - Timeline on left */}
       <div className="hidden sm:flex items-start">
         <div className="flex flex-col items-center mr-6">
-          {/* Timeline Node */}
           <div className={`relative z-10 flex items-center justify-center w-12 h-12 transition-all duration-300 group-hover:scale-110 ${current
             ? 'dark:bg-white border-gray-700 dark:border-gray-300'
             : ' dark:bg-gray-300 border-gray-500 dark:border-gray-500'
             }`}>
-            {companyIcon ? (
-              <div className={current ? "text-white dark:text-gray-900" : "text-white dark:text-gray-900"}>
-                <div className="w-6 h-6">
-                  {companyIcon}
-                </div>
-              </div>
-            ) : (
-              <div className="w-3 h-3 bg-white dark:bg-gray-900 rounded-full"></div>
-            )}
+            <div className="w-3 h-3 bg-white dark:bg-gray-900 rounded-full"></div>
           </div>
 
-          {/* Vertical Line */}
           {!isLast && (
             <div className="w-0.5 h-24 bg-gradient-to-b from-gray-400 to-gray-300 dark:from-gray-500 dark:to-gray-600 mt-2"></div>
           )}
         </div>
 
-        {/* Content Card for Desktop */}
         <div className="flex-1 px-6 py-6 mb-8 relative w-full">
           {current && (
             <div className="absolute -top-3 -right-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-3 py-1 rounded-full font-semibold shadow-lg">
               Current Role
             </div>
           )}
-
-          {/* Header */}
           <div className="mb-4">
             <div className="flex flex-row items-center justify-between mb-2 gap-4">
               <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
@@ -91,8 +57,6 @@ function TimelineItem({ title, company, location, duration, description, technol
               )}
             </div>
           </div>
-
-          {/* Description */}
           <div className="mb-6 text-start">
             <ul className="space-y-3">
               {description.map((item, index) => (
@@ -103,8 +67,6 @@ function TimelineItem({ title, company, location, duration, description, technol
               ))}
             </ul>
           </div>
-
-          {/* Technologies */}
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, index) => (
               <span
@@ -117,16 +79,12 @@ function TimelineItem({ title, company, location, duration, description, technol
           </div>
         </div>
       </div>
-
-      {/* Mobile Content - Below the centered icon */}
       <div className="sm:hidden px-4 pt-4 relative">
         {current && (
           <div className="absolute -top-2 -right-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs px-2 py-1 rounded-full font-semibold shadow-lg">
             Current Role
           </div>
         )}
-
-        {/* Header */}
         <div className="mb-3 text-center">
           <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
             {title}
@@ -135,7 +93,6 @@ function TimelineItem({ title, company, location, duration, description, technol
             <LuCalendar className="w-3 h-3" />
             <span className="font-medium">{duration}</span>
           </div>
-
           <div className="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-300">
             <div className="flex items-center gap-2">
               <LuBuilding2 className="w-3 h-3" />
@@ -150,7 +107,6 @@ function TimelineItem({ title, company, location, duration, description, technol
           </div>
         </div>
 
-        {/* Description */}
         <div className="mb-4 text-start">
           <ul className="space-y-2">
             {description.map((item, index) => (
@@ -162,7 +118,6 @@ function TimelineItem({ title, company, location, duration, description, technol
           </ul>
         </div>
 
-        {/* Technologies */}
         <div className="flex flex-wrap gap-1.5 justify-center">
           {technologies.map((tech, index) => (
             <span
@@ -193,8 +148,7 @@ export default function Experience() {
         "Integrated Auth0 for authentication and Paddle for payment processing",
         "Built advanced features such as custom trading indicators and multi-asset backtesting for stocks, crypto, and NFTs"
       ],
-      technologies: ["Next.js", "FastAPI", "AWS", "Auth0", "Paddle", "DynamoDB", "S3", "TypeScript"],
-      companyIcon: <LuMonitorCog className="w-6 h-6 text-blue-600" />
+      technologies: ["Next.js", "FastAPI", "AWS", "Auth0", "Paddle", "DynamoDB", "S3", "TypeScript"]
     },
     {
       title: "Software Development Engineer",
@@ -206,8 +160,7 @@ export default function Experience() {
         "Redesigned marketplace onboarding, achieving a 90% improvement in expansion efficiency",
         "Collaborated across teams to scale system architecture and support growing operational needs"
       ],
-      technologies: ["Java", "AWS", "DynamoDB", "Lambda", "Python"],
-      companyIcon: <SiAmazon className="w-6 h-6 text-orange-500" />
+      technologies: ["Java", "AWS", "DynamoDB", "Lambda", "Python"]
     },
     {
       title: "Software Developer",
@@ -219,8 +172,7 @@ export default function Experience() {
         "Improved data streaming latency from 4+ hours to under 5 seconds",
         "Refactored core market data processing, enhancing performance and maintainability"
       ],
-      technologies: ["Java", "Python", "Javascript", "jQuery", "AWS", "Market Data APIs"],
-      companyIcon: <LuBuilding2 className="w-6 h-6 text-purple-600" />
+      technologies: ["Java", "Python", "Javascript", "jQuery", "AWS", "Market Data APIs"]
     }
   ];
 
@@ -231,8 +183,7 @@ export default function Experience() {
           Professional Experience
         </h2>
       </AnimatedHeader>
-
-      <StaggeredContainer className="relative">
+      <StaggeredContainer className="relative flex flex-col flex-wrap gap-8 md:gap-4">
         {experiences.map((experience, index) => (
           <TimelineItem
             key={index}
