@@ -7,7 +7,6 @@ import Education from './content/education';
 import Achievements from './content/achievements';
 import Skills from './content/skills';
 import Head from './content/head';
-import Resume from './content/resume';
 
 export default function SoftwareEngineer() {
   return (
@@ -21,7 +20,6 @@ export default function SoftwareEngineer() {
         <Skills />
         <Education />
         <Achievements />
-        <Resume />
       </motion.div>
     </div>
   );
