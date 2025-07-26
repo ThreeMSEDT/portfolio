@@ -19,7 +19,7 @@ export default function Head() {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/ThreeMSEDT"
+          href="https://github.com/0x99M"
           target="_blank"
           rel="noopener noreferrer"
           className="text-3xl text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 hover:scale-110 transform"
